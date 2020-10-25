@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Text,View} from 'react-native';
+import {Text,View , Image} from 'react-native';
 import {Card} from 'react-native-elements';
 import {DISHES} from '../shared/dishes';
 
@@ -11,11 +11,20 @@ function RenderDish(props) {
         return (
            <Card
            featuredTitle={dish.name}
-           image={require('./images/uthappizza.png')}>
+        //    image={require('./images/uthappizza.png')}
+           >
                <Text style={{ margin : 10}}>
                    {dish.description}
                </Text>
-            
+               <Card.Image
+            style={{ justifyContent: "center", backgroundColor: "#fff" }}
+          >
+               <Image
+              style={{ width: 100, height: 100, alignSelf: "center" }}
+              resizeMode="contain"
+              source={require('./images/uthappizza.png')}
+            />
+              </Card.Image>
            </Card>
         )
 

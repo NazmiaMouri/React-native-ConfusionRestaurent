@@ -1,9 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { View, Text } from 'react-native'
 
  class Home extends Component {
     render() {
         return (
-            <View><Text>Home Component</Text></View>
+            <Drawer.Navigator initialRouteName="Home">
+            <Drawer.Screen name="Home" component={Home} />
+            {/* <Drawer.Screen name="Notifications" component={NotificationsScreen} /> */}
+          </Drawer.Navigator>
+           
         )
     }
 }
